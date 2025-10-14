@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="*"
+        android:textColor="@color/red_ffec1212"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/key"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/key" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/key"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginStart="@dimen/dp_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/star"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="key" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:minHeight="@dimen/dp_80"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:background="@drawable/s_beee_c5"
+        app:layout_constraintTop_toBottomOf="@+id/key"
+        tools:hint="value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_5"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/value"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="12/300" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

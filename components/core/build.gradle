@@ -1,0 +1,44 @@
+if (componentsIndependence.toBoolean()) {
+    apply plugin: 'com.android.application'
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-kapt'
+    apply from: "$rootDir/channel.gradle"
+} else {
+    apply plugin: 'com.android.library'
+}
+
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        if (componentsIndependence.toBoolean()) {
+            applicationId "com.gk.world.core"
+            multiDexEnabled true
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        resourcePrefix "core_"
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //组件独立运行时 base依赖 过来
+    if (componentsIndependence.toBoolean()) {
+        //依赖自己的公共部分 基础包
+        implementation project(':baselib:resource')
+    } else {
+        //作为基础依赖
+        api project(':baselib:resource')
+        //通讯录
+        api project(':components:contacts')
+    }
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.map.LocalMapActivity">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_117"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.gk.world.resouce.dynamic.CustomTitleView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/map" />
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_toStartOf="@+id/search"
+            android:background="#fff"
+            android:hint="@string/text_search"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_50"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_search"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+        <com.gk.world.map.custom.MapShowPointsView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text"
+            app:map_clickable="true"
+            app:map_clickable_in_griding="false"
+            app:map_gesture_control="true"
+            app:map_show_localing="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

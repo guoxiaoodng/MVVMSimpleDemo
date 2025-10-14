@@ -1,0 +1,4 @@
+<resources>
+    <string name="map_locting">定位中.....</string>
+    <string name="map_address">地址:</string>
+</resources>

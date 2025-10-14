@@ -1,0 +1,110 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'kotlin-parcelize'
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    //悬浮层
+    api project(':baselib:float')
+    /**网络*/
+    api project(':baselib:net')
+    /**地图*/
+    api project(':modules:map')
+    /**视频会商*/
+    api project(':modules:rtc-chat')
+    /**腾讯X5 web view*/
+    api project(':modules:tecentx5')
+    /**极光*/
+    api project(':modules:jpush')
+    /**图表**/
+    api project(':modules:MPChartLib')
+
+    /**
+     * 进度
+     */
+    api project(':modules:schedule')
+
+    annotationProcessor 'androidx.annotation:annotation:1.3.0'
+
+    api 'androidx.appcompat:appcompat:1.4.1'
+    api 'com.google.android.material:material:1.5.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.3'
+
+    testApi 'junit:junit:+'
+    androidTestApi 'androidx.test.ext:junit:1.1.3'
+    androidTestApi 'androidx.test.espresso:espresso-core:3.4.0'
+    // ------------------------------65536-------------------------------------
+    api("androidx.multidex:multidex:2.0.1")
+
+    // ------------------------------recycler view 库-------------------------------------
+    //noinspection GradleDependency
+    api "com.github.liangjingkanji:BRV:$versions.brv_version"
+    //缺省页
+    api 'com.github.liangjingkanji:StateLayout:1.4.1'
+    //基础依赖(activity fragment)
+    api 'com.github.liangjingkanji:Engine:0.0.71'
+    //StatusBar
+    api 'com.github.liangjingkanji:StatusBar:2.0.2'
+    //Channel eventbus
+    api 'com.github.liangjingkanji:Channel:1.1.5'
+    //lottie框架
+    api 'com.airbnb.android:lottie:5.2.0'
+
+    //aRouter
+    api 'com.alibaba:arouter-api:1.5.2'
+
+    api 'androidx.navigation:navigation-fragment-ktx:2.4.2'
+    api 'androidx.navigation:navigation-ui-ktx:2.4.2'
+
+    api 'io.coil-kt:coil:1.4.0'
+    api 'io.coil-kt:coil-video:1.4.0'
+    api 'io.coil-kt:coil-gif:1.4.0'
+
+    api 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    // Kotlin + coroutines
+    api "androidx.work:work-runtime-ktx:2.7.1"
+    //适配
+    api 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+    //tab layout
+    api 'com.github.li-xiaojun:FlycoTabLayout:2.0.6'
+    //utilcodex
+    api 'com.blankj:utilcodex:1.31.0'
+
+    // PictureSelector 基础 (必须)
+    api 'io.github.lucksiege:pictureselector:v3.0.5'
+
+    // 图片压缩 (按需引入)
+    implementation 'io.github.lucksiege:compress:v3.0.5'
+    api 'com.ycjiang:ImagePreview:2.3.7'
+    api 'com.github.liangjingkanji:spannable:1.0.2'
+    //html 解析框架
+    api 'org.jsoup:jsoup:1.13.1'
+}

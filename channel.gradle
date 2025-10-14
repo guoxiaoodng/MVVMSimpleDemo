@@ -1,0 +1,41 @@
+android {
+//分渠道打包
+    flavorDimensions "official"
+    productFlavors {
+        产业治理 {
+            /*if (!componentsIndependence.toBoolean()) {
+                applicationIdSuffix ""
+            }*/
+            dimension "official"
+            versionCode 1
+            versionName "1.0.0"
+            //URL
+            buildConfigField "String", "BASE_URL", '"http://192.168.20.243:8090"'
+//            buildConfigField "String", "BASE_URL", '"http://6im2ap.natappfree.cc"'
+            //用于访问富文本中的文件添加前缀使用
+            buildConfigField "String", "BASE_URL_FILE", '"http://192.168.20.243:8091"'
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: "com.gk.world.comprehensive",
+                    //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_APPKEY : "33dd7f14a6c77d184e80c2e0",
+                    //暂时填写默认值即可.
+                    JPUSH_CHANNEL: "developer-default",
+                    appName    : "@string/app_name",
+                    appIcon    : "@mipmap/ic_launcher",
+                    baiduMapKey: "fZXQcEWx98RqMq0g5jnQeK92xhaEP0KP",
+            ]
+        }
+    }
+    /*组件化需要组件 动态依赖 找到 AndroidManifest 需要时放开*/
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs 'libs'
+//            resources.srcDirs = ['src/main/res', 'src/main/res/']
+//            if (componentsIndependence.toBoolean()) {
+//                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+//            } else {
+//                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+//            }
+//        }
+//    }
+}

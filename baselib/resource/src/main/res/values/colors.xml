@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#ff076bff</color>
+    <color name="theme_color_40">#401b6aff</color>
+    <color name="theme_background">#f3f3f5</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_fffafafa">#fffafafa</color>
+    <color name="gray_f2">#fff2f2f2</color>
+    <color name="bg_white">#fff3f3f5</color>
+
+    <color name="gray_666">#666666</color>
+    <color name="gray_eee">#EEEEEE</color>
+    <color name="gray_ccc">#cccccc</color>
+    <color name="gray_999">#999999</color>
+    <color name="gray_888">#888888</color>
+    <color name="gray_fafafa">#fffafafa</color>
+    <color name="gray_8a8">#8a8a8a</color>
+    <color name="gray_f7f7f7">#fff7f7f7</color>
+
+    <color name="black">#FF000000</color>
+    <color name="black_333">#ff333333</color>
+    <color name="transparent">#00000000</color>
+    <color name="trans">#0000</color>
+    <color name="green_00b84d">#00B84D</color>
+    <color name="green_ff00cf51">#ff00cf51</color>
+    <color name="green_ffe0ffed">#ffe0ffed</color>
+    <color name="red_ffffe6e7">#ffffe6e7</color>
+    <color name="red_ffec1212">#ffec1212</color>
+    <color name="grenn_82ddaa">#82ddaa</color>
+    <color name="orange_ffed6f00">#ffed6f00</color>
+    <color name="gray_ffb3b3b3">#ffb3b3b3</color>
+</resources>

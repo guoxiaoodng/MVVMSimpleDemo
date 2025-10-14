@@ -1,0 +1,6 @@
+<resources>
+    <string name="identity">1234567890Xx</string>
+    <string name="long_click_delete">长按可以删除</string>
+    <string name="options_compat_title_text">title_text</string>
+    <string name="options_compat_activity">activity</string>
+</resources>

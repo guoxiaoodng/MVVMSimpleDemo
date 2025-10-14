@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.ready.GuideFragment">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_80"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/shape_b_ffffff_c_15_s_ffd7d7d7"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/jump"
+            android:textColor="@color/gray_999"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.gk.world.comprehensive.customview.ViewPagerIndicator
+            android:id="@+id/ib"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="@dimen/dp_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:vpi_default_color="@color/gray_999"
+            app:vpi_distance="@dimen/dp_20"
+            app:vpi_distanceType="BY_DISTANCE"
+            app:vpi_indicatorType="BEZIER"
+            app:vpi_radius="@dimen/dp_5"
+            app:vpi_selected_color="@color/theme_color" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/shape_b_theme_c_2"
+            android:paddingStart="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_30"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/ib"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

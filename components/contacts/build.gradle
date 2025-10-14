@@ -1,0 +1,29 @@
+if (componentsIndependence.toBoolean()) {
+    apply plugin: 'com.android.application'
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-kapt'
+    apply from: "$rootDir/channel.gradle"
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        if (componentsIndependence.toBoolean()) {
+            applicationId "com.gk.world.contacts"
+            multiDexEnabled true
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        resourcePrefix "contacts_"
+    }
+}
+
+dependencies {
+    implementation project(':baselib:resource')
+}

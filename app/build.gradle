@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply from: "$rootDir/channel.gradle"
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        applicationId "com.weique.industry"
+//        applicationId "com.weique"
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        kapt {
+            arguments {
+                //根据模块名来命名路由根节点
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+    //自动签名
+    signingConfigs {
+        config {
+            keyAlias 'weique'
+            keyPassword 'weique'
+            storeFile file('../industry.jks')
+            storePassword 'weique'
+        }
+    }
+    buildTypes {
+        /*测试 debug*/
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        /*release*/
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    //配置自定义打包名称
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName
+            def date = new Date()
+            def formattedDate = date.format("yyyy_MM_dd_HH_mm", TimeZone.getTimeZone("GMT+8:00"))
+            fileName = "渠道_${variant.flavorName}" +
+                    "_版本_${variant.mergedFlavor.versionName}" +
+                    "_时间_${formattedDate}" +
+                    "_环境_${variant.buildType.name}.apk"
+            outputFileName = fileName
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    kapt 'com.alibaba:arouter-compiler:1.5.2'
+    //组件独立运行时 主工程自己依赖基础组件  base gradle 中有逻辑处理
+    if (componentsIndependence.toBoolean()) {
+        //暂定 自主运行
+        implementation project(':baselib:resource')
+    } else {//组件非自主运行 依赖base
+        implementation project(':components:core')
+    }
+}

@@ -1,0 +1,88 @@
+<resources>
+    <string name="welcome"><![CDATA[ © 2019–2021 GXD]]></string>
+    <string name="welcome_jump">跳过(%1$sS)</string>
+    <string name="phone_login">登录</string>
+    <string name="hint_login_name">输入登录账号</string>
+    <string name="hint_login_pas">输入登录密码</string>
+    <string name="hint_verify">输入验证码</string>
+    <string name="login">登录</string>
+    <string name="app_name">SimpleDemo</string>
+    <string name="app_name_help">MVVM_DataBinding</string>
+    <!--百度统计用的key-->
+    <string name="baidu_all_zz">ae5fcf1c25</string>
+    <!--版权-->
+    <string name="app_splash_copyright">GXD</string>
+    <string name="agreement">请同意《隐私政策》与《用户协议》</string>
+
+
+    <string name="title_work">TAB_ONE</string>
+    <string name="analyse">TAB_TWO</string>
+    <string name="title_my">TAB_THREE</string>
+    <string name="title_address">TAB_FOUR</string>
+
+    <string name="system_set">系统设置</string>
+    <string name="logout_login">退出登录</string>
+
+    <string name="ove">取消</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="input_name">请输入企业名称/姓名/手机号</string>
+    <string name="name">姓名</string>
+    <string name="p_input_name">请输入账号</string>
+    <string name="p_input_ps">请输入密码</string>
+    <string name="p_auth_code">请输入验证码</string>
+    <string name="login_h">欢迎登录智慧园区工作端</string>
+
+    <string name="text_normal">正常</string>
+    <string name="text_exception">异常</string>
+
+    <string name="identity">身份证</string>
+
+    <string name="text_please_choose">请选择</string>
+    <string name="text_search">搜索</string>
+    <string name="start">开始</string>
+    <string name="company">投资公司</string>
+    <string name="acreage">用地面积</string>
+    <string name="amount_invested">总投资额</string>
+
+    <string name="map">地图</string>
+
+    <string name="title_setting">设置</string>
+    <string name="text_exit">退出</string>
+    <string name="title_tips">提示</string>
+
+    <string name="next_speak">下次再说</string>
+    <string name="update_new">马上更新</string>
+
+    <string name="text_version_info">版本信息</string>
+    <string name="text_updating">更新中, 请稍后…</string>
+    <string name="portraits">头像</string>
+    <string name="phone">手机号</string>
+    <string name="area">所在区域</string>
+    <string name="department">所在部门</string>
+    <string name="role">角色</string>
+    <string name="alert_pw">修改密码</string>
+    <string name="jump">跳过</string>
+    <string name="all_p">全部项目</string>
+    <string name="c_n">沟通洽谈</string>
+    <string name="p_p">项目签约</string>
+    <string name="p_s">项目开工</string>
+
+    <string name="alert_pas">修改密码</string>
+    <string name="ols_pas">旧密码</string>
+    <string name="input_ols_pas">请输入旧密码</string>
+    <string name="input_new_pas">请输入新密码</string>
+    <string name="input_new_pas_again">请再次输入新密码</string>
+    <string name="new_pas">新密码</string>
+    <string name="new_pas_a">重复新密码</string>
+    <string name="et">无</string>
+
+    <string-array name="home_project_menu">
+        <item>@string/all_p</item>
+        <item>@string/c_n</item>
+        <item>@string/p_p</item>
+        <item>@string/p_s</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--name 必须跟 自定义view 的名称一样 要不找不到属性-->
+    <declare-styleable name="MapShowPointsView">
+        <!--显示放大缩小按钮-->
+        <attr name="map_show_zoom" format="boolean" />
+        <!--手势控制-->
+        <attr name="map_gesture_control" format="boolean" />
+        <!--缩放比-->
+        <attr name="map_map_zoom" format="float" />
+        <!--显示定位点 默认定位一次 并显示再定位点-->
+        <attr name="map_show_localing" format="boolean" />
+        <!--true 地图跟随定位显示 false时跟着传进来的点显示 传进来的点为空时显示定位点的位置-->
+        <attr name="map_follow_positioning_display" format="boolean" />
+        <!--定位扫描间隔-->
+        <attr name="map_localing_scan_span" format="integer" />
+        <!--可点击的-->
+        <attr name="map_clickable" format="boolean" />
+        <!--点击再网格内-->
+        <attr name="map_clickable_in_griding" format="boolean" />
+    </declare-styleable>
+</resources>

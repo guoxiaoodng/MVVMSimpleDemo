@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_state"
+    android:layout_width="@dimen/dp_100"
+    android:layout_height="@dimen/dp_35"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_b_ffe0ffed_c_4_str_1"
+    tools:text="正常"
+    android:gravity="center"
+    android:textSize="@dimen/sp_13"
+    android:textColor="@color/green_00b84d"/>

@@ -1,0 +1,30 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "kt-base"
+include ':app'
+include ':baselib:net'
+include ':baselib:resource'
+include ':baselib:float'
+include ':baselib:bodyguard'
+
+
+include ':modules:map'
+include ':modules:rtc-chat'
+include ':modules:tecentx5'
+
+include ':components:core'
+include ':components:contacts'
+include ':modules:jpush'
+include ':modules:schedule'
+include ':modules:MPChartLib'

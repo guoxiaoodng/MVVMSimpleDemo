@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--背景图片-->
+    <attr name="src" format="reference" />
+    <!--遮罩层颜色，建议带透明度-->
+    <attr name="maskLayerColor" format="color" />
+    <!--是否滚动-->
+    <attr name="isScroll" format="boolean" />
+    <!--滚动速度,建议取值区间 [1,50] -->
+    <attr name="speed" format="integer">
+        <enum name="slow" value="1" />
+        <enum name="ordinary" value="3" />
+        <enum name="fast" value="5" />
+    </attr>
+    <!-- 滚动方向,默认是竖直方向滚动-->
+    <attr name="scrollOrientation" format="integer">
+        <enum name="toTop" value="0" />
+        <enum name="toBottom" value="1" />
+        <enum name="toLeft" value="2" />
+        <enum name="toRight" value="3" />
+    </attr>
+    <declare-styleable name="SrcScrollFrameLayout">
+        <attr name="src" />
+        <attr name="maskLayerColor" />
+        <attr name="isScroll" />
+        <attr name="speed" />
+        <attr name="scrollOrientation" />
+    </declare-styleable>
+    <declare-styleable name="SrcLoopScrollFrameLayout">
+        <attr name="src" />
+        <attr name="maskLayerColor" />
+        <attr name="isScroll" />
+        <attr name="speed" />
+        <attr name="scrollOrientation" />
+    </declare-styleable>
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="vpi_selected_color" format="color|reference"/>
+        <attr name="vpi_default_color" format="color|reference"/>
+        <attr name="vpi_radius" format="dimension|reference"/>
+        <attr name="vpi_radius_selected" format="dimension|reference"/>
+        <attr name="vpi_length" format="dimension|reference"/>
+        <attr name="vpi_distance" format="dimension|reference"/>
+        <attr name="vpi_num" format="integer"/>
+        <attr name="vpi_indicatorType">
+            <enum name="LINE" value="0" />
+            <enum name="CIRCLE" value="1" />
+            <enum name="CIRCLE_LINE" value="2" />
+            <enum name="BEZIER" value="3" />
+            <enum name="SPRING" value="4" />
+            <enum name="PROGRESS" value="5" />
+        </attr>
+        <attr name="vpi_distanceType">
+            <enum name="BY_RADIUS" value="0" />
+            <enum name="BY_DISTANCE" value="1" />
+            <enum name="BY_LAYOUT" value="2" />
+        </attr>
+        <attr name="vpi_animation" format="boolean"/>
+    </declare-styleable>
+</resources>
