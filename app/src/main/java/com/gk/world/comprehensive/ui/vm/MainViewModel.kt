@@ -1,11 +1,14 @@
 package com.gk.world.comprehensive.ui.vm
 
+import android.Manifest
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.scopeNetLife
-import com.gk.world.comprehensive.R
+import com.blankj.utilcode.util.ToastUtils
 import com.gk.world.comprehensive.bean.HomeMenuItemBean
-import com.gk.world.resouce.arouter.constance.ARouterConstance
+import com.gk.world.comprehensive.ui.activity.MainActivity
+import com.hjq.permissions.OnPermissionCallback
+import com.hjq.permissions.XXPermissions
 
 /**
  *版权 ： GXD
@@ -16,6 +19,34 @@ import com.gk.world.resouce.arouter.constance.ARouterConstance
  */
 class MainViewModel : ViewModel() {
     val enums = MutableLiveData<ArrayList<HomeMenuItemBean>>()
+
+    fun requestSerialPortPermission(activity: MainActivity) {
+        XXPermissions.with(activity)
+            .permission(Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .request(object : OnPermissionCallback {
+                override fun onGranted(permissions: MutableList<String>?, all: Boolean) {
+                    if (all) {
+                        ToastUtils.showLong("获取相关权限成功")
+                    } else {
+                        ToastUtils.showLong("获取相关权限成功，部分权限未正常授予")
+                    }
+                }
+
+                override fun onDenied(permissions: MutableList<String>?, never: Boolean) {
+                    super.onDenied(permissions, never)
+                    if (never) {
+                        ToastUtils.showLong("被永久拒绝授权，请手动授予相关权限")
+                        // 如果是被永久拒绝就跳转到应用权限系统设置页面
+                        XXPermissions.startPermissionActivity(activity, permissions)
+                    } else {
+                        ToastUtils.showLong("获取相关权限失败")
+                    }
+                }
+
+            })
+    }
+
     fun getEnums() {
         scopeNetLife {
             /*全部菜单*/

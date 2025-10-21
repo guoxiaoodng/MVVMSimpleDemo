@@ -29,7 +29,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
     override fun initData() {
         vm.getEnums()
+        requestSerialPort()
 //        getVersion()
+    }
+
+    private fun requestSerialPort() {
+        vm.requestSerialPortPermission(this)
     }
 
 

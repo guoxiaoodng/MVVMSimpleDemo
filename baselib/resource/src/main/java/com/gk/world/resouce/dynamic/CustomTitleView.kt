@@ -18,13 +18,17 @@ import com.gk.world.resouce.extend.ActivityUtilsExtend
 import com.gk.world.resource.R
 
 /**
- *版权 ： GXD
- *@author: gxd
- *@date: 2021/11/9
- *@time: 15:55
- *@description： 自定义title view
+ * 版权 ： GXD
+ * @author: gxd
+ * @date: 2021/11/9
+ * @time: 15:55
+ * @description： 自定义title view
  */
-class CustomTitleView() : ConstraintLayout,
+class CustomTitleView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) : ConstraintLayout(context, attrs, defStyleAttr),
     View.OnClickListener, View.OnLongClickListener, Parcelable {
 
     private var arrow: AppCompatImageView? = null
@@ -34,36 +38,28 @@ class CustomTitleView() : ConstraintLayout,
     private var rightImgView2: AppCompatImageView? = null
     private var operateLayout: LinearLayoutCompat? = null
 
-    constructor(parcel: Parcel) : this() {
+    // 需要持久化的状态
+    private var title: String? = null
+    private var titleColor: Int = Color.BLACK
 
-    }
-
-    /*var rightText: String? = null
-    var tintImg: Drawable? = null*/
-
-    constructor(@NonNull context: Context) : this(
-        context,
-        null
-    )
-
-
-    constructor(@NonNull context: Context, @Nullable attrs: AttributeSet? = null) : this(
-        context,
-        attrs,
-        0
-    )
-
-    constructor(
-        @NonNull context: Context,
-        @Nullable attrs: AttributeSet? = null,
-        defStyleAttr: Int,
-    ) : super(
-        context, attrs, defStyleAttr
-    ) {
+    init {
         initView()
         if (attrs != null) {
             initAttrs(attrs)
         }
+    }
+
+    constructor(parcel: Parcel) : this(
+        parcel.readParcelable(Context::class.java.classLoader)!!,
+        parcel.readParcelable(AttributeSet::class.java.classLoader),
+        parcel.readInt()
+    ) {
+        title = parcel.readString()
+        titleColor = parcel.readInt()
+        // 恢复状态
+        titleView?.text = title
+        titleView?.setTextColor(titleColor)
+        arrow?.setColorFilter(titleColor)
     }
 
     /**
@@ -138,16 +134,18 @@ class CustomTitleView() : ConstraintLayout,
             attrs,
             R.styleable.CustomTitleView, 0, 0
         )
-        val title = ta.getString(R.styleable.CustomTitleView_title)
-        val tintColor = ta.getColor(R.styleable.CustomTitleView_tint_color, Color.BLACK)
-        /*rightText = ta.getNonResourceString(R.styleable.CustomTitleView_right_text)
-        tintImg = ta.getDrawable(R.styleable.CustomTitleView_tint_img)*/
+        title = ta.getString(R.styleable.CustomTitleView_title)
+        titleColor = ta.getColor(R.styleable.CustomTitleView_tint_color, Color.BLACK)
+
         titleView?.text = title
-        titleView?.setTextColor(tintColor)
-        arrow?.setColorFilter(tintColor)
+        titleView?.setTextColor(titleColor)
+        arrow?.setColorFilter(titleColor)
+
+        ta.recycle() // 记得回收TypedArray
     }
 
     fun setTitle(title: String) {
+        this.title = title
         titleView?.text = title
     }
 
@@ -157,9 +155,6 @@ class CustomTitleView() : ConstraintLayout,
                 val activity = context as? Activity
                 activity?.onBackPressed()
             }
-            else -> {
-
-            }
         }
     }
 
@@ -167,9 +162,6 @@ class CustomTitleView() : ConstraintLayout,
         when (v?.id) {
             R.id.title, R.id.arrow -> {
                 ActivityUtilsExtend.finishOtherWithNameActivities(ARouterConstance.Main.MAIN_ACTIVITY)
-            }
-            else -> {
-
             }
         }
         return true

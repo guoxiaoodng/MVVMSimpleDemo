@@ -6,7 +6,7 @@ import android.widget.Toast
 import cn.jpush.android.api.*
 import cn.jpush.android.service.JPushMessageReceiver
 import com.drake.channel.sendEvent
-import com.example.jpush.TagAliasOperatorHelper
+import com.gxd.jpush.TagAliasOperatorHelper
 import com.gk.world.resouce.arouter.constance.ARouterConstance
 import com.gk.world.resouce.arouter.guest.MessageTypeEnum
 import com.gk.world.resouce.arouter.guest.VisitorCallMessage

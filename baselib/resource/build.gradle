@@ -37,19 +37,13 @@ dependencies {
     api project(':baselib:net')
     /**地图*/
     api project(':modules:map')
-    /**视频会商*/
-    api project(':modules:rtc-chat')
-    /**腾讯X5 web view*/
-    api project(':modules:tecentx5')
     /**极光*/
     api project(':modules:jpush')
     /**图表**/
     api project(':modules:MPChartLib')
+    /**串口**/
+    api project(':modules:SerialPort')
 
-    /**
-     * 进度
-     */
-    api project(':modules:schedule')
 
     annotationProcessor 'androidx.annotation:annotation:1.3.0'
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jpush">
+    package="com.gxd.jpush">
 
     <application>
         <!-- Since JCore2.0.0 Required SDK核心功能-->
         <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
         <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
         <service
-            android:name=".PushService"
+            android:name="com.gxd.jpush.PushService"
             android:enabled="true"
             android:exported="false"
             android:process=":pushcore">

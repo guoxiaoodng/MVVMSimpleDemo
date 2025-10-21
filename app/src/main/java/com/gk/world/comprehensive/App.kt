@@ -13,12 +13,8 @@ import coil.fetch.VideoFrameFileFetcher
 import coil.fetch.VideoFrameUriFetcher
 import coil.util.CoilUtils
 import com.alibaba.android.arouter.launcher.ARouter
-import com.baidu.mapapi.CoordType
-import com.baidu.mapapi.SDKInitializer
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.Utils
-//import com.dds.skywebrtc.SkyEngineKit
-//import com.dds.skywebrtc.rtccore.voip.VoipEvent
 import com.drake.brv.utils.BRV
 import com.drake.engine.utils.AppUtils
 import com.drake.net.NetConfig
@@ -31,7 +27,6 @@ import com.drake.net.okhttp.setRequestInterceptor
 import com.drake.net.request.BaseRequest
 import com.drake.statelayout.StateConfig
 import com.gk.world.comprehensive.works.RenameWorkerFactory
-import com.gk.world.map.service.LocSdkClient
 import com.gk.world.net.AppCacheManager
 import com.gk.world.net.constance.http.HttpParamConst
 import com.gk.world.net.converter.GsonConverter
@@ -41,12 +36,8 @@ import com.hjq.toast.ToastUtils
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.MaterialHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
-import com.tecent.tecentx5.TecentX5WebUtil
 import com.tencent.bugly.crashreport.CrashReport
 import com.tencent.mmkv.MMKV
-//import map.baidu.ar.init.ArSdkManager
-//import map.baidu.ar.init.MKGeneralListener
-//import map.baidu.ar.utils.ArBDLocation
 import okhttp3.OkHttpClient
 import timber.log.Timber
 import timber.log.Timber.DebugTree
@@ -83,8 +74,6 @@ class App : Application(), ImageLoaderFactory, Configuration.Provider {
             }
 
         })*/
-        //x5内核初始化
-        TecentX5WebUtil.getUtil().initX5Web(this)
     }
 
     /*private fun initBaidu() {
