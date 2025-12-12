@@ -33,13 +33,13 @@ import com.gk.world.resouce.arouter.ARouterUtils
 import com.gk.world.resouce.arouter.constance.ARouterConstance
 import com.gk.world.resouce.bean.KeyValueAddInterface
 import com.gk.world.resouce.bean.KeyValueInterface
+import com.gk.world.resouce.bean.MediaBean
 import com.gk.world.resouce.bean.UploadDataBean
 import com.gk.world.resouce.engine.PictureSelectionUtil
 import com.gk.world.resource.R
 import com.luck.picture.lib.entity.LocalMedia
 import com.luck.picture.lib.interfaces.OnResultCallbackListener
 import com.luck.picture.lib.utils.PictureFileUtils
-import com.tecent.tecentx5.bean.MediaBean
 import timber.log.Timber
 import java.io.File
 import java.util.*
@@ -580,7 +580,7 @@ class KeyValueMediaListOneView : LinearLayoutCompat {
     /**
      * 设置key的drawable
      */
-    private fun setKeyDrawableLeft(@Nullable d: Drawable) {
+    private fun setKeyDrawableLeft(d: Drawable) {
         keyView!!.setCompoundDrawables(d, null, null, null)
     }
 

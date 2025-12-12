@@ -14,7 +14,6 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.KeyboardUtils
-import com.dds.skywebrtc.rtccore.socket.SocketManager
 import com.drake.net.Get
 import com.drake.net.utils.scopeDialog
 import com.drake.spannable.movement.ClickableMovementMethod
@@ -32,7 +31,6 @@ import com.gk.world.resouce.arouter.ARouterUtils
 import com.gk.world.resouce.arouter.constance.ARouterConstance
 import com.gk.world.resouce.arouter.guest.VisitorBean
 import com.gk.world.resouce.base.BaseActivity
-import com.tecent.tecentx5.bean.MediaBean
 
 
 /**
@@ -57,7 +55,6 @@ class LoginActivity : BaseActivity<FragmentLoginBinding>(R.layout.fragment_login
 
     override fun initView() {
         ARouter.getInstance().inject(this)
-        SocketManager.getInstance().unConnect()
         AppCacheManager.getAftMmkv().clearAll()
         ActivityUtils.finishAllActivitiesExceptNewest()
         val loginBean = AppCacheManager.getPreMmkv()
@@ -85,21 +82,21 @@ class LoginActivity : BaseActivity<FragmentLoginBinding>(R.layout.fragment_login
         binding.agreement.movementMethod = ClickableMovementMethod.getInstance()
         binding.agreement.text = getString(R.string.agreement)
             .replaceSpan("《隐私政策》") {
-                HighlightSpan(Color.parseColor("#ed6a2c")) {
-                    ARouterUtils.routerParcelable(ARouterConstance.X5.X5_WEB_VIEW,
-                        null,
-                        MediaBean("file:///android_asset/yszc.html", "隐私政策")
-                    )
-                }
+//                HighlightSpan(Color.parseColor("#ed6a2c")) {
+//                    ARouterUtils.routerParcelable(ARouterConstance.X5.X5_WEB_VIEW,
+//                        null,
+//                        MediaBean("file:///android_asset/yszc.html", "隐私政策")
+//                    )
+//                }
             }.replaceSpan("《用户协议》") {
                 HighlightSpan(
                     Color.parseColor("#4a70d2"),
                     Typeface.defaultFromStyle(Typeface.BOLD)
                 ) {
-                    ARouterUtils.routerParcelable(ARouterConstance.X5.X5_WEB_VIEW,
-                        null,
-                        MediaBean("file:///android_asset/user_xy.html", "用户协议")
-                    )
+//                    ARouterUtils.routerParcelable(ARouterConstance.X5.X5_WEB_VIEW,
+//                        null,
+//                        MediaBean("file:///android_asset/user_xy.html", "用户协议")
+//                    )
                 }
             }
         initClick()

@@ -1,7 +1,6 @@
 package com.gk.world.comprehensive.bean
 
 import android.os.Parcelable
-import com.gk.world.resouce.dynamic.single.CommonListItemNextParamsInterface
 import kotlinx.parcelize.Parcelize
 
 /**

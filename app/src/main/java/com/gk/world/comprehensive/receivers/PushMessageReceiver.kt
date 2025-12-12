@@ -24,8 +24,6 @@ class PushMessageReceiver : JPushMessageReceiver() {
 //        intent.putExtra("msg", customMessage.message);
 //        context.sendBroadcast(intent);
         val visitorCallBean = VisitorCallMessage(MessageTypeEnum.Update)
-        sendEvent(visitorCallBean, ARouterConstance.Main.GTASKS_FRAGMENT)
-        sendEvent(visitorCallBean, ARouterConstance.Main.REPAIR_ORDER_FRAGMENT)
     }
 
     override fun onNotifyMessageOpened(context: Context?, message: NotificationMessage) {

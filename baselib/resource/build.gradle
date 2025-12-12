@@ -41,8 +41,6 @@ dependencies {
     api project(':modules:jpush')
     /**图表**/
     api project(':modules:MPChartLib')
-    /**串口**/
-    api project(':modules:SerialPort')
 
 
     annotationProcessor 'androidx.annotation:annotation:1.3.0'

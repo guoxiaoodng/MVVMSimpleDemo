@@ -65,7 +65,7 @@
                 app:layout_constraintEnd_toEndOf="@id/second_line"
                 android:gravity="center"
                 android:text="@string/ove"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/theme_color"
                 android:textSize="@dimen/sp_16"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -77,7 +77,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:gravity="center"
                 android:text="@string/sure"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/theme_color"
                 android:textSize="@dimen/sp_16"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

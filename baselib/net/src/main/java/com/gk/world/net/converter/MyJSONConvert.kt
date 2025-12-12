@@ -43,7 +43,7 @@ abstract class MyJSONConvert(
                         json.getInt(this.code) == HttpConst.SUCCESS.HTTP200 || json.getInt(this.code) == HttpConst.SUCCESS.HTTP201 -> {
                             bodyString.parseBody<R>(succeed)
                         }
-                        json.getInt(this.code) == HttpConst.OTHER.HTTP503 ||//token 无啦 去登录页
+                        /*json.getInt(this.code) == HttpConst.OTHER.HTTP503 ||//token 无啦 去登录页
                                 json.getInt(this.code) == HttpConst.FAIL.HTTP401 -> {//token 无啦 去登录页
                             ARouter.getInstance().build("/main/LoginActivity").navigation()
                             val errorMessage = json.optString(
@@ -51,7 +51,7 @@ abstract class MyJSONConvert(
                                 "用户已过期，请重新登录"
                             )
                             throw ResponseException(response, errorMessage)
-                        }
+                        }*/
                         else -> { // 错误码匹配失败, 开始写入错误异常
                             val errorMessage = json.optString(
                                 message,
