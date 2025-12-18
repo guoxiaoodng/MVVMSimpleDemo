@@ -3,4 +3,5 @@
     <string name="long_click_delete">长按可以删除</string>
     <string name="options_compat_title_text">title_text</string>
     <string name="options_compat_activity">activity</string>
+    <string name="text_scan_qr_or_input">扫描二维码或输入</string>
 </resources>

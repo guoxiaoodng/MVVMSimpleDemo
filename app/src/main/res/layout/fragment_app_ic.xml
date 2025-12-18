@@ -5,9 +5,6 @@
 
     <data>
 
-        <variable
-            name="m"
-            type="com.gk.world.comprehensive.bean.ProjectTypeBeanItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,17 +12,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/dp_10"
-            android:text="@{m.value}"
             android:textColor="@color/gray_666"
             android:textSize="@dimen/sp_12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="全部项目" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -20,12 +20,18 @@ import com.hjq.permissions.XXPermissions
 class MainViewModel : ViewModel() {
     val enums = MutableLiveData<ArrayList<HomeMenuItemBean>>()
 
+    val permissionStatus = MutableLiveData(false)
+
     fun requestSerialPortPermission(activity: MainActivity) {
         XXPermissions.with(activity)
-            .permission(Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .permission(
+                Manifest.permission.INTERNET,
+                Manifest.permission.ACCESS_WIFI_STATE,
+                Manifest.permission.ACCESS_NETWORK_STATE,
+            )
             .request(object : OnPermissionCallback {
                 override fun onGranted(permissions: MutableList<String>?, all: Boolean) {
+                    permissionStatus.value = all
                     if (all) {
                         ToastUtils.showLong("获取相关权限成功")
                     } else {
@@ -35,6 +41,7 @@ class MainViewModel : ViewModel() {
 
                 override fun onDenied(permissions: MutableList<String>?, never: Boolean) {
                     super.onDenied(permissions, never)
+                    permissionStatus.value = false
                     if (never) {
                         ToastUtils.showLong("被永久拒绝授权，请手动授予相关权限")
                         // 如果是被永久拒绝就跳转到应用权限系统设置页面
