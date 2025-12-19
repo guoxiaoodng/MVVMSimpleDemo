@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gk.world.resource">
+    package="com.data.mobile.resource">
     <!--适配Android R包可见性 开始-->
     <queries package="${applicationId}">
         <intent>

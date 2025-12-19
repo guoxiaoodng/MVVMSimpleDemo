@@ -8,19 +8,19 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.gk.world.comprehensive.ui.fragment.main.HomeFragment"
+        android:name="com.data.hemo.mobile.ui.fragment.main.HomeFragment"
         android:label="HOME"
         tools:layout="@layout/fragment_main_home" />
 
     <fragment
         android:id="@+id/app"
-        android:name="com.gk.world.comprehensive.ui.fragment.main.AppFragment"
+        android:name="com.data.hemo.mobile.ui.fragment.main.AppFragment"
         android:label="APP"
         tools:layout="@layout/fragment_main_app" />
 
     <fragment
         android:id="@+id/my"
-        android:name="com.gk.world.comprehensive.ui.fragment.main.MyFragment"
+        android:name="com.data.hemo.mobile.ui.fragment.main.MyFragment"
         android:label="MY"
         tools:layout="@layout/fragment_main_my" />
 </navigation>

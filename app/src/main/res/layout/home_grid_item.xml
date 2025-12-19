@@ -8,11 +8,11 @@
 
         <variable
             name="bc"
-            type="com.gk.world.comprehensive.BuildConfig" />
+            type="com.data.hemo.mobile.BuildConfig" />
 
         <variable
             name="m"
-            type="com.gk.world.comprehensive.bean.HomeMenuItemBean" />
+            type="com.data.hemo.mobile.bean.HomeMenuItemBean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

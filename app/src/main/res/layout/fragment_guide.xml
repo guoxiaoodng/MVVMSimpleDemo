@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragment.ready.GuideFragment">
+        tools:context="com.data.hemo.mobile.ui.fragment.ready.GuideFragment">
 
 
         <androidx.viewpager2.widget.ViewPager2
@@ -36,7 +36,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.gk.world.comprehensive.customview.ViewPagerIndicator
+        <com.data.hemo.mobile.customview.ViewPagerIndicator
             android:id="@+id/ib"
             android:layout_width="match_parent"
             android:layout_height="50dp"

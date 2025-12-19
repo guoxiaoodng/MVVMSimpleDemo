@@ -7,7 +7,7 @@
 
         <variable
             name="m"
-            type="com.gk.world.comprehensive.bean.UserInfoBean" />
+            type="com.data.hemo.mobile.bean.UserInfoBean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -8,8 +8,7 @@ android {
     compileSdkVersion versions.compileSdk
 
     defaultConfig {
-        applicationId "com.weique.industry"
-//        applicationId "com.weique"
+        applicationId "com.hemo.mobile"
         minSdk versions.minSdk
         targetSdk versions.targetSdk
         versionCode versions.versionCode

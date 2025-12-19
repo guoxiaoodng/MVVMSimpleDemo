@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.fragment.main.AppFragment">
+        tools:context="com.data.hemo.mobile.ui.fragment.main.AppFragment">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/name"

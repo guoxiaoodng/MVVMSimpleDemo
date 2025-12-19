@@ -15,7 +15,7 @@ android {
             //用于访问富文本中的文件添加前缀使用
             buildConfigField "String", "BASE_URL_FILE", '"http://192.168.20.243:8091"'
             manifestPlaceholders = [
-                    JPUSH_PKGNAME: "com.gk.world.comprehensive",
+                    JPUSH_PKGNAME: "com.data.hemo.mobile",
                     //JPush 上注册的包名对应的 Appkey.
                     JPUSH_APPKEY : "33dd7f14a6c77d184e80c2e0",
                     //暂时填写默认值即可.

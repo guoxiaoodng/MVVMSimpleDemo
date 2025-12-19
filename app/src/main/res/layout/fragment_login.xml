@@ -7,7 +7,7 @@
 
         <variable
             name="user"
-            type="com.gk.world.net.bean.GlobalUserInfoBean" />
+            type="com.data.mobile.net.bean.GlobalUserInfoBean" />
     </data>
 
 
@@ -17,7 +17,7 @@
         android:background="@drawable/login_bg"
         android:layoutAnimation="@anim/layout_fall_down"
         android:padding="@dimen/dp_20"
-        tools:context=".ui.activity.LoginActivity"
+        tools:context="com.data.hemo.mobile.ui.activity.LoginActivity"
         tools:layoutAnimation="@null">
 
         <androidx.appcompat.widget.AppCompatTextView

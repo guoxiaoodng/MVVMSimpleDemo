@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activity.map.LocalMapActivity">
+        tools:context="com.data.hemo.mobile.ui.activity.map.LocalMapActivity">
 
         <View
             android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.gk.world.resouce.dynamic.CustomTitleView
+        <com.data.mobile.resouce.dynamic.CustomTitleView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
 
-        <com.gk.world.map.custom.MapShowPointsView
+        <com.gxd.world.map.custom.MapShowPointsView
             android:id="@+id/map"
             android:layout_width="match_parent"
             android:layout_height="0dp"

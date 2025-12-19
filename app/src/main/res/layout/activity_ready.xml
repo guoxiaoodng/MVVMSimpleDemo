@@ -19,5 +19,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_ready"
-        tools:context=".ui.activity.ReadyActivity" />
+        tools:context="com.data.hemo.mobile.ui.activity.ReadyActivity" />
 </layout>

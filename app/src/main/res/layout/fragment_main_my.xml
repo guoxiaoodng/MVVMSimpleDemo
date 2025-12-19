@@ -69,7 +69,7 @@
                 android:layout_marginEnd="@dimen/dp_15"
                 android:background="@color/gray_eee" />
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/name"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                 android:layout_height="@dimen/dp_10"
                 android:background="@color/theme_background" />
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/phone"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
@@ -118,7 +118,7 @@
                 android:layout_marginEnd="@dimen/dp_15"
                 android:background="@color/gray_eee" />
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/identity"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                 android:layout_marginEnd="@dimen/dp_15"
                 android:background="@color/gray_eee" />
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/area"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
@@ -170,7 +170,7 @@
                 android:layout_marginEnd="@dimen/dp_15"
                 android:background="@color/gray_eee" />
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/department"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
@@ -195,7 +195,7 @@
                 android:layout_marginEnd="@dimen/dp_15"
                 android:background="@color/gray_eee" />
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/role"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
@@ -218,7 +218,7 @@
                 android:layout_height="@dimen/dp_10"
                 android:background="@color/theme_background" />
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/alert_pw"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
@@ -238,7 +238,7 @@
                 app:value_size="@dimen/sp_12" />
 
 
-            <com.gk.world.resouce.dynamic.kv.KeyValueSingleView
+            <com.data.mobile.resouce.dynamic.kv.KeyValueSingleView
                 android:id="@+id/set"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"

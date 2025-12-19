@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.gk.world.comprehensive">
+    package="com.data.hemo.mobile">
 
     <uses-permission android:name="android.permission.ACCESS_GPS" />
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
@@ -62,7 +62,7 @@
         tools:replace="android:label"
         tools:targetApi="o">
         <activity
-            android:name="com.gk.world.comprehensive.ui.activity.ReadyActivity"
+            android:name="com.data.hemo.mobile.ui.activity.ReadyActivity"
             android:exported="true"
             android:launchMode="singleTop">
             <intent-filter>
@@ -82,17 +82,17 @@
             android:exported="false"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.gk.world.comprehensive.ui.activity.map.LocalMapActivity"
+            android:name="com.data.hemo.mobile.ui.activity.map.LocalMapActivity"
             android:exported="false"
             android:launchMode="singleTask" />
         <activity
-            android:name="com.gk.world.comprehensive.ui.activity.PasswordManageActivity"
+            android:name="com.data.hemo.mobile.ui.activity.PasswordManageActivity"
             android:exported="false"
             android:launchMode="singleTask" />
 
         <!-- 兼容 7.0新特性-私有目录被限制访问 -->
         <provider
-            android:name="com.gk.world.resouce.config.UpdateFileProvider"
+            android:name="com.data.mobile.resouce.config.UpdateFileProvider"
             android:authorities="${applicationId}.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -102,7 +102,7 @@
         </provider>
 
         <activity
-            android:name="com.gk.world.comprehensive.ui.activity.MainActivity"
+            android:name="com.data.hemo.mobile.ui.activity.MainActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan" />
@@ -138,7 +138,7 @@
         <!-- 3.3.0开始所有事件将通过该类回调 -->
         <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
         <receiver
-            android:name="com.gk.world.comprehensive.receivers.PushMessageReceiver"
+            android:name="com.data.hemo.mobile.receivers.PushMessageReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>

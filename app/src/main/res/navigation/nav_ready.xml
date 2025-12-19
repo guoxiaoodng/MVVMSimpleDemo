@@ -6,7 +6,7 @@
     app:startDestination="@id/main">
     <!--<fragment
         android:id="@+id/splash"
-        android:name="com.gk.world.comprehensive.ui.fragment.ready.SplashFragment"
+        android:name="com.data.hemo.mobile.ui.fragment.ready.SplashFragment"
         android:label="闪屏页"
         tools:layout="@layout/fragment_splash">
 
@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/guide"
-        android:name="com.gk.world.comprehensive.ui.fragment.ready.GuideFragment"
+        android:name="com.data.hemo.mobile.ui.fragment.ready.GuideFragment"
         android:label="引导页1"
         tools:layout="@layout/fragment_guide">
         <action
@@ -48,12 +48,12 @@
     </fragment>
     <activity
         android:id="@+id/login"
-        android:name="com.gk.world.comprehensive.ui.activity.LoginActivity"
+        android:name="com.data.hemo.mobile.ui.activity.LoginActivity"
         android:label="登录页"
         tools:layout="@layout/fragment_login" />
     <activity
         android:id="@+id/main"
-        android:name="com.gk.world.comprehensive.ui.activity.MainActivity"
+        android:name="com.data.hemo.mobile.ui.activity.MainActivity"
         android:label="主页"
         tools:layout="@layout/activity_main" />
 </navigation>
